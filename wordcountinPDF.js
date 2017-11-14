@@ -1,0 +1,16 @@
+var wordcount = 0;
+var numberofpages = 0;
+var numberofwordsonpage1 = 0;
+var numberofwordsonpage2 = 0;
+var firstwordonpage1 = "";
+for (var p = 0; p < this.numPages; p++) wordcount += getPageNumWords(p);
+numberofpages = this.numPages;
+numberofwordsonpage0 = getPageNumWords(0);
+numberofwordsonpage1 = getPageNumWords(1);
+numberofwordsonpage2 = getPageNumWords(2);
+firstwordonpage1 = this.getPageNthWord(1, 1);
+console.println("There are "+ wordcount + " words in this file of " + numberofpages + " pages total.");
+console.println("\n e.g. Page 0 (Cover Page) has " + numberofwordsonpage0 + " words on it.");
+console.println("\n e.g. Page 1 has " + numberofwordsonpage1 + " words on it.");
+console.println("\n e.g. Page 2 has " + numberofwordsonpage2 + " words on it.");
+console.println("\n e.g. The first word on Page 1 is " + firstwordonpage1 + ".");
